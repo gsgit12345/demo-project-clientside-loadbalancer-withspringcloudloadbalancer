@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class EmployeeControllerApp {
     public static void main(String[] args) {
-        SpringApplication.run(EmployeeControllerApp.class,args);
+        SpringApplication.run(EmployeeControllerApp.class, args);
         System.out.println("Employee service  started!");
     }
 }
