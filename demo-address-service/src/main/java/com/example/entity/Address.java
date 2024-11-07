@@ -3,12 +3,14 @@ package com.example.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "address")
+@Table(name = "address_tbl")
 public class Address {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "ID")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence")
+    @SequenceGenerator(name = "id_Sequence", sequenceName = "ID_SEQ")
+
     private int id;
 
     @Column(name = "city")

@@ -14,9 +14,9 @@ public class AddressController {
     @Autowired
     public AddressService addressService;
 
-    @GetMapping("/getAddress/{empid}")
-    public ResponseEntity<AddressResponse> getAddressByEmployeeId(@PathVariable("empid") int empid) {
-        AddressResponse addressResponse = addressService.findAddressByEmployeeId(empid);
+    @GetMapping("/address/{id}")
+    public ResponseEntity<AddressResponse> getAddressByEmployeeId(@PathVariable("id") int id) {
+        AddressResponse addressResponse = addressService.findAddressByEmployeeId(id);
 
         return ResponseEntity.status(HttpStatus.OK).body(addressResponse);
     }
